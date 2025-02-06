@@ -108,6 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+PPASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -131,3 +135,5 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'rango:login'
